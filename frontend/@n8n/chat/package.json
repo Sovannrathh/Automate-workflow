@@ -52,7 +52,6 @@
     "@iconify-json/lucide": "catalog:",
     "@iconify-json/mdi": "catalog:",
     "@n8n/eslint-config": "workspace:*",
-    "@n8n/playwright-janitor": "workspace:*",
     "@n8n/stylelint-config": "workspace:*",
     "@n8n/typescript-config": "workspace:*",
     "@n8n/vitest-config": "workspace:*",

@@ -25,7 +25,6 @@
   "devDependencies": {
     "@iconify/json": "^2.2.488",
     "@n8n/eslint-config": "workspace:*",
-    "@n8n/playwright-janitor": "workspace:*",
     "@n8n/stylelint-config": "workspace:*",
     "@n8n/typescript-config": "workspace:*",
     "@n8n/vitest-config": "workspace:*",
