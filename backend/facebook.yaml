@@ -1,0 +1,19 @@
+# Compose overlay: injects Facebook App / webhook credentials into the n8n
+# container as environment variables, so workflows can read them via
+# n8n expressions like {{$env.FB_PAGE_ACCESS_TOKEN}}.
+#
+# Usage:
+#   docker compose -f n8n.yaml -f facebook.yaml up -d
+#
+# Meta Developer Console setup:
+#   - Webhook callback URL: <WEBHOOK_URL>webhook/facebook   (your n8n webhook node path)
+#   - Verify token: must match FB_VERIFY_TOKEN below
+
+services:
+  n8n:
+    environment:
+      - FB_APP_ID=${FB_APP_ID:?set FB_APP_ID in .env}
+      - FB_APP_SECRET=${FB_APP_SECRET:?set FB_APP_SECRET in .env}
+      - FB_VERIFY_TOKEN=${FB_VERIFY_TOKEN:?set FB_VERIFY_TOKEN in .env}
+      - FB_PAGE_ACCESS_TOKEN=${FB_PAGE_ACCESS_TOKEN:?set FB_PAGE_ACCESS_TOKEN in .env}
+      - FB_GRAPH_API_VERSION=${FB_GRAPH_API_VERSION:-v21.0}
